@@ -7,6 +7,7 @@ import { useTimedEvents } from "./hooks/useTimedEvents.tsx";
 import eventsList from "./data/events-list.ts";
 import { ComposableIcon } from "./components/ComposableIcon.tsx";
 import { ComposableIconsProvider } from "./hooks/useComposableIcons.tsx";
+import { Debug } from "./utils/debug/Debug.tsx";
 
 let timerId = 0;
 
@@ -26,6 +27,9 @@ function App() {
 
   return (
     <div>
+      <Debug>
+        <div>Press P to toggle me!</div>
+      </Debug>
       <h2>Composable Icons Playground</h2>
       <ComposableIconsProvider
         value={{
